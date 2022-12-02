@@ -1,0 +1,42 @@
+
+
+
+Finish login function and close the menus once cliked links 
+save token on local storage, validate token on login. 
+
+when a link is clicked , close menu. 
+
+
+
+Understand the use of token, to identify different users and apply this on proyect - global var and destructure (desestructurar) - 
+
+atob , res.data.token --- 
+
+Make the modal to show me either signin or sign out, and be able to call it from profile button
+
+
+finish signIn function and continue to work in the proyect
+chech on validatepass
+
+
+
+Understand the use of ending poitns to connect and make the app to perform
+
+Make an input form for products and use props to do the job
+
+Build the differents layouts and desing pages
+
+
+Logics on permits
+Admin should be the only one able to create products, edit and delete products
+
+User should be able to see products as well as the admin
+
+Admin should be the only one capable to create an admin
+
+User can create an User and edit their own profile, (add an activated, unactivated mode.)
+
+
+'Bearer' eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzODEwZWYwYTE5MmU5NzNiNTIzYTZiNyIsImlhdCI6MTY2OTQwMjM1Mn0.L4Gv9fq-lcShRm8mI5tZYv9GLTkzDpp0354c3sgASQI
+
+
