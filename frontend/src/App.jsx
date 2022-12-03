@@ -8,20 +8,19 @@ import Layout from '../src/components/layout';
 import Us from '../src/views/us';
 import Store from '../src/views/store';
 import Blog from '../src/views/blog';
+import Profile from '../src/components/profile';
 
 
 
 function App() {
   const context = useContext(UserContext)
-  console.log(context.validToken)
-  
+    
   useEffect(()=>{
   context.validToken()
   },[])
 
   const token = context.userState.token
-  console.log(context)
-  console.log(token)
+ 
   
 
   return (
@@ -43,6 +42,11 @@ function App() {
         path="/blog"
         element={<Blog />}
       />
+      <Route
+        path="/profile"
+        element={<Profile />}
+      />
+
       {/* <Route 
          path="/signin"
          element={<Login tag="signin" />}

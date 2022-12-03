@@ -5,17 +5,17 @@ import './comp.css'
 const Jobs = ({infoJobs}) => {
       
 
-    const {  imgUrl, tittle, comment, paragraph} = infoJobs
+    const {  imgUrl, title, comment, paragraph} = infoJobs
 
    
 
     return (
 
     
-        <div className="productCard">
-        <h2>hola</h2>
-        <img src={imgUrl} width="150px" alt="" />
-        <h3>{tittle}</h3>
+        <div className="jobCard">
+        
+        <img src={imgUrl} width="350px" alt="" />
+        <h2>{title}</h2>
         <p>{comment}</p>
         <p>{paragraph}</p>
         {/* Here on the function addtocart I´m sending data, and I have to use arrouw function otherwise it will run on the page load.  */}

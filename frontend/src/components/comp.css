@@ -1,9 +1,39 @@
 
+/* jobs */
 
-.productCard{
+.jobCard{
+    background-color: #f7dad963;
     display: inline-block;
-    box-shadow: 10px, 10px, 3px black;
- 
+    box-shadow: 5px 5px 5px #434747;
     border-style: solid;
     border-radius: 5px, black;
+}
+
+/* product */
+.productCard{
+    background-color: #90b64d6c;
+    display: inline-block;
+    box-shadow: 10px 10px 5px #434747;
+    border-style: solid;
+    border-radius: 5px, black;
+}
+
+/* navbar */
+
+.titlemobile{
+   padding: 10px;
+   width: 350px;
+}
+
+@media (max-width : 560px){
+    .titlemobile{
+        padding: 10px;
+        width: 650px;
+     }
+}
+
+.imgmobile{
+    width: 250px;
+    margin-right: -20px;
+
 }

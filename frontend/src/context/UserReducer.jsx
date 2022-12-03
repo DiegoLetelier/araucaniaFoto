@@ -12,6 +12,11 @@ const userReducer = (state, action) => {
         localStorage.setItem('token', payload)
         return {token: payload, tag: tag }
     case 'VALID' :
+        localStorage.setItem('token', payload)
+        return {token: payload, tag: tag}
+    case 'GET' :
+        return {user: payload}
+    case 'EDIT' :
         return {token: payload, tag: tag}
 
     default : 

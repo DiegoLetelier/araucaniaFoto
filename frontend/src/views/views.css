@@ -1,6 +1,67 @@
+/* us */
+
+.jobsCont {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+@media (max-width : 940px){
+    .jobsCont {
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+}
+
+/* store */
+
+
 .productCont{
-    background-color: rgb(56, 196, 158);
+    text-align: center;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 5px;
+}
+
+@media (max-width : 1250px){
+
+    .productCont{
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+    }
+    }
+    
+
+@media (max-width : 900px){
+
+.productCont{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5px;
+}
+}
+
+
+/* home */
+
+.customVideo{
+    overflow: hidden;
+    padding-bottom: 55%;
+    position: relative;
+    height: 0;
+
+}
+
+.customVideo iframe{
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
 }

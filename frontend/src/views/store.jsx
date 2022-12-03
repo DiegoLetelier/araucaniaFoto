@@ -21,7 +21,7 @@ useEffect(()=> {
    
 
         try {
-            const res = await axios.get('http://localhost:4000/api/producto/8')
+            const res = await axios.get('http://localhost:4000/api/producto/12')
             const { succes, products } = res.data
       
             if (succes) {

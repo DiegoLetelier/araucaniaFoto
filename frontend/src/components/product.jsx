@@ -15,11 +15,11 @@ const Product = ({item}) => {
     
         <div className="productCard">
         
-        <img src={imgurl} width="150px" alt="" />
+        <img src={imgurl} width="350px" alt="" />
         <h3>{name}</h3>
-        <p>{brand}</p>
-        <p>{stock}</p>
-        <p>{price}</p>
+        <p>Marca:{brand}</p>
+        <p>Stock:{stock}</p>
+        <p>Precio:${price}</p>
         {/* Here on the function addtocart I´m sending data, and I have to use arrouw function otherwise it will run on the page load.  */}
         {/* context.addToCart(_id) */}
         <button disabled={stock>0? false : true} onClick={()=>dispatch({type:'ADD', payload: item})}>Agregar al carrito</button>

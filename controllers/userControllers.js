@@ -26,9 +26,17 @@ const createUser = async (req, res) => {
 
 const getUser = async (req, res) => {
   try {
-    console.log(req.params);
 
-    res.json({ succes: true });
+
+    // const { id } = req.params;
+    
+    // const result = await User.findById(id)
+    // if (!result) {
+    //   throw new Error(" el usuario que intentas buscar no existe");
+    // }
+    // console.log(result)
+
+    res.json({ succes: true, res: res.data });
   } catch (e) {
     res.json({ succes: false, message: e.message });
   }
@@ -101,7 +109,7 @@ const validateToken = async (req, res) => {
   res.json({
     succes: true,
     message: "llegué al token",
-   
+    
   });
   
 };

@@ -1,3 +1,4 @@
+import './comp.css'
 import * as React from 'react';
 import {Link} from 'react-router-dom'
 import AppBar from '@mui/material/AppBar';
@@ -13,18 +14,18 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import {useContext} from 'react';
 import UserContext from '../context/UserContext'
 import BasicModal from './modal';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import ProfileAdmin from './profileadmin';
-import Profile from './profile';
+import Perfil from './profile';
 
 
 
 
 // const pages = [ 'Nosotros', 'Tienda', 'Blog' ];
-const pagesLinks = [{text :'Nosotros', url:'/us'}, {text: 'tienda', url: '/store'} ,{text:'blog', url:'/blog'} ];
+const pagesLinks = [{text: 'Inicio', url: '/'}, {text :'Nosotros', url:'/us'}, {text: 'Tienda', url: '/store'}  ];
 // Usar operador ternario para 'iniciar sesión' vs 'Mi perfil y cerrar Sesión'
 
 
@@ -95,18 +96,17 @@ const Navbar = () => {
   } 
 
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl">
+    <AppBar position="static"  style={{backgroundColor: "#91B7C7"}}>
+      <Container maxWidth="xl" >
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            href=""
             sx={{
               mr: 2,
-              display: { xs: 'none', md: 'flex' },
+              display: { xs: 'none', sm: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
@@ -114,7 +114,7 @@ const Navbar = () => {
               textDecoration: 'none',
             }}
           >
-            LOGO
+          <img src="../../media/img/logo.png" />
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -157,24 +157,30 @@ const Navbar = () => {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          
           <Typography
-            variant="h5"
+            variant="p"
             noWrap
             component="a"
             href=""
             sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
+              mr: 0.1,
+              display: { xs: 'flex', sm: 'none' },
+              flexGrow: 0,
               fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
+              fontWeight: 300,
+              letterSpacing: '.05rem',
               color: 'inherit',
               textDecoration: 'none',
+              autoWidth: 'true',
             }}
           >
-            LOGO
+            <img src="../../media/img/logomobile.png" className='imgmobile'/>
+            <br></br>
+          
+            <Stack className='titlemobile'>
+            <p>Araucanía<br></br>Fotovoltaica</p>
+            </Stack>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
              
@@ -191,10 +197,12 @@ const Navbar = () => {
             ))}
           </Box>
 
+          <ShoppingCartIcon/>
+          
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
+            <Tooltip title="Perfil">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-              <Avatar >tú</Avatar> 
+              <Avatar src="/broken-image.jpg" /> 
               </IconButton>
             </Tooltip>
             <Menu
@@ -215,12 +223,14 @@ const Navbar = () => {
             >
               
                 
+                <MenuItem key='log' textalign="center" >{token ? <Link to={'/profile'}>Mi perfil</Link> : null}</MenuItem>
                 <MenuItem key='log' textalign="center" onClick={clickHandle}> {token ? 'Cerrar Sesión' : <BasicModal />}
                 </MenuItem>
                {/* <MenuItem> {tag ==='admin'?  <ProfileAdmin /> :<Profile />} </MenuItem> */}
               
             </Menu>
           </Box>
+          
         </Toolbar>
       </Container>
     </AppBar>

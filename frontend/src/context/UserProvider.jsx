@@ -43,6 +43,43 @@ const UserProvider = ({ children }) => {
     }
   };
 
+ const showUser = async () => {
+  
+    const tokenn = localStorage.getItem("token");
+    if (tokenn) {
+      const res = await axios.get("http://localhost:4000/api/usuario/display", {
+        headers: {
+          Authorization: 'Bearer ' + tokenn,
+        },
+      });
+      if (res.data.succes) {
+        console.log(res.data)
+        dispatch({ type: "GET", payload: res.data.user });
+    }
+  }};
+ 
+
+  const editUser = async (userEdit) => {
+    const id = userEdit.id
+    try {
+      const res = await axios.put(`
+        "http://localhost:4000/api/usuario/${{id}}"`,
+        userEdit
+      );
+      if (res.data.succes) {
+        // const token = res.data.token
+        dispatch({ type: "EDIT", payload: res.data });
+        console.log(res.data);
+        // if(token){
+        // console.log('im in')
+        // }
+      } else return console.log(res.data.message);
+    } catch (e) {
+      console.log(e.message);
+    }
+  };
+
+
   const validToken = async () => {
     const tokenn = localStorage.getItem("token");
     if (tokenn) {
@@ -52,7 +89,7 @@ const UserProvider = ({ children }) => {
         },
       });
       if (res.data.succes) {
-        console.log(res.data)
+        
         dispatch({ type: "LOGIN", payload: tokenn, tag: res.data.tag });
     }
   }};
@@ -63,7 +100,7 @@ const UserProvider = ({ children }) => {
 
   return (
     <UserContext.Provider
-      value={{ userState, signUp, signOut, signIn, validToken }}
+      value={{ userState, signUp, signOut, signIn, showUser, editUser, validToken }}
     >
       {children}
     </UserContext.Provider>

@@ -16,7 +16,7 @@ const Us = () => {
     
     const getJobs = async () => {
         try {
-            const res = await axios.get('http://localhost:4000/api/jobs/1')
+            const res = await axios.get('http://localhost:4000/api/jobs/4')
             const { succes, jobs } = res.data
       
             if (succes) {
@@ -35,7 +35,7 @@ const Us = () => {
             <p>Iniciamos nuestro trabajo instalando paneles solares en nuestra propia casa. Y vimos cómo la comunidad alrededor nuestro se mostrpo interesada.
                 En nuestro equipo hay ingenieros eléctricos, industriales, técnicos y algunos otros que nos apoyan. Les dejamos algunos de nuestros proyectos. 
             </p>
-            <div className='productCont'>
+            <div className='jobsCont'>
             {jobs.map((e) => (<Jobs key={e._id} infoJobs={e}  />))}
             </div>
         </div>
