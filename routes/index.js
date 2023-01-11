@@ -49,8 +49,8 @@ router.route('/usuario')
 .post(createUser)
 
 
-router.route('/usuario/display')
-.get(auth, getUser)
+router.route('/usuario/display/:id')
+.get(getUser)
 
 router.route('/usuario/:id')
 .put(editUser)

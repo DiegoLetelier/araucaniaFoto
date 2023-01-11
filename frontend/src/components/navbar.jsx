@@ -18,8 +18,7 @@ import {useContext} from 'react';
 import UserContext from '../context/UserContext'
 import BasicModal from './modal';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import ProfileAdmin from './profileadmin';
-import Perfil from './profile';
+import CartContext from '../context/cart/CartContext';
 
 
 
@@ -63,7 +62,10 @@ const Navbar = () => {
   // const tag = context.userstate.tag
   // console.log(tag)
 
- 
+  const cartContext = useContext(CartContext)
+  console.log(cartContext)
+   let cartNumber = cartContext.cartState.qty
+  // console.log(cartNumber)
   
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -140,6 +142,7 @@ const Navbar = () => {
                 vertical: 'top',
                 horizontal: 'left',
               }}
+              
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
@@ -179,7 +182,7 @@ const Navbar = () => {
             <br></br>
           
             <Stack className='titlemobile'>
-            <p>Araucanía<br></br>Fotovoltaica</p>
+              <p>Araucanía<br></br>Fotovoltaica </p>
             </Stack>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
@@ -196,9 +199,13 @@ const Navbar = () => {
               </Stack>
             ))}
           </Box>
-
-          <ShoppingCartIcon/>
+          <Box>
           
+          <ShoppingCartIcon ></ShoppingCartIcon>
+          <div>
+          <p className='cartNumber'>{cartNumber}</p>
+          </div>
+          </Box>
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Perfil">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
@@ -223,7 +230,7 @@ const Navbar = () => {
             >
               
                 
-                <MenuItem key='log' textalign="center" >{token ? <Link to={'/profile'}>Mi perfil</Link> : null}</MenuItem>
+                <MenuItem key='log' textalign="center" >{token ? <Link to={'/profile/'}>Mi perfil</Link> : null}</MenuItem>
                 <MenuItem key='log' textalign="center" onClick={clickHandle}> {token ? 'Cerrar Sesión' : <BasicModal />}
                 </MenuItem>
                {/* <MenuItem> {tag ==='admin'?  <ProfileAdmin /> :<Profile />} </MenuItem> */}

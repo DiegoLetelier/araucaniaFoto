@@ -43,7 +43,7 @@ function App() {
         element={<Blog />}
       />
       <Route
-        path="/profile"
+        path="/profile/"
         element={<Profile />}
       />
 

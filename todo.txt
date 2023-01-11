@@ -1,4 +1,10 @@
 
+Donde se consume el componente profile, decirle que tiene una ruta dinamica.
+
+atob 
+
+
+Use the fkn get product function or the get jobs function to make the fukn profile function work.... you idiot!!
 
 Build the differents desing pages, start on home, then us, then store, then the blog. 
 
@@ -53,3 +59,7 @@ chech on validatepass
 Understand the use of ending poitns to connect and make the app to perform
 
 Make an input form for products and use props to do the job
+
+
+meli mercado libre
+nttdata

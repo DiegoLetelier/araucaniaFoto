@@ -29,7 +29,7 @@ const Home = () => {
     />
      </div>
        
-       <h2>{token}</h2>
+       
        
        
        </div>

@@ -20,6 +20,10 @@
 
 /* navbar */
 
+.cartNumber{
+    color: black;
+}
+
 .titlemobile{
    padding: 10px;
    width: 350px;

@@ -1,11 +1,15 @@
-import {useContext} from 'react'
-import CartContext from '../context/cart/CartContext'
-import './comp.css'
+import {useContext} from 'react';
+import CartContext from '../context/cart/CartContext';
+import {useState} from 'react';
+import './comp.css';
  
 
 const Product = ({item}) => {
     const context = useContext(CartContext)
+   
     const dispatch = context.dispatch;
+
+    const [qty, setQty] = useState(1)
    
 
     const { imgurl, name, stock, price, brand} = item
@@ -22,7 +26,15 @@ const Product = ({item}) => {
         <p>Precio:${price}</p>
         {/* Here on the function addtocart I´m sending data, and I have to use arrouw function otherwise it will run on the page load.  */}
         {/* context.addToCart(_id) */}
-        <button disabled={stock>0? false : true} onClick={()=>dispatch({type:'ADD', payload: item})}>Agregar al carrito</button>
+        <input type="number"
+               name="qty"
+               id="qty" 
+               onChange={(e)=> setQty(e.target.value)}
+               />
+        <button disabled={stock>0? false : true} 
+        onClick={()=>dispatch({type:'ADD', payload: {item, qty}})}>
+            Agregar al carrito
+            </button>
         
         </div>
         

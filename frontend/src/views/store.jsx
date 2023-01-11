@@ -10,6 +10,8 @@ const context = useContext(userContext)
 console.log(context)
 //const token = context.sate.token
 
+
+
 useEffect(()=> {
     document.title = 'Tienda'
     getProducts()

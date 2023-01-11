@@ -27,16 +27,15 @@ const createUser = async (req, res) => {
 const getUser = async (req, res) => {
   try {
 
-
-    // const { id } = req.params;
+    const { id } = req.params;
     
-    // const result = await User.findById(id)
-    // if (!result) {
-    //   throw new Error(" el usuario que intentas buscar no existe");
-    // }
-    // console.log(result)
-
-    res.json({ succes: true, res: res.data });
+    const user = await User.findById(id)
+    if (!user) {
+      throw new Error(" el usuario que intentas buscar no existe");
+    }
+     
+        
+    res.json({ succes: true,  user: user});
   } catch (e) {
     res.json({ succes: false, message: e.message });
   }
@@ -56,6 +55,7 @@ const deleteUser = async (req, res) => {
 };
 
 const editUser = async (req, res) => {
+  console.log(req.params)
   try {
     const { id } = req.params;
     const result = await User.findByIdAndUpdate(id, req.body, { new: true });
