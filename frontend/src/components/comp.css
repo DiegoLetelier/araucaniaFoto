@@ -41,3 +41,18 @@
     margin-right: -20px;
 
 }
+
+.product-row{
+    display: flex;
+    width : 100%;
+    border: 1px solid #444;
+    margin-bottom: 15px;
+}
+
+.product-row img {
+    width: 100px;
+}
+
+.name {
+    flex: 1
+}

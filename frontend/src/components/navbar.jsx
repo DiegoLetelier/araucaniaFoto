@@ -199,6 +199,7 @@ const Navbar = () => {
               </Stack>
             ))}
           </Box>
+          <Link to='/cart/'>
           <Box>
           
           <ShoppingCartIcon ></ShoppingCartIcon>
@@ -206,6 +207,7 @@ const Navbar = () => {
           <p className='cartNumber'>{cartNumber}</p>
           </div>
           </Box>
+          </Link>
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Perfil">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>

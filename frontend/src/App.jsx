@@ -9,6 +9,7 @@ import Us from '../src/views/us';
 import Store from '../src/views/store';
 import Blog from '../src/views/blog';
 import Profile from '../src/components/profile';
+import Cart from '../src/views/cart'
 
 
 
@@ -46,16 +47,10 @@ function App() {
         path="/profile/"
         element={<Profile />}
       />
-
-      {/* <Route 
-         path="/signin"
-         element={<Login tag="signin" />}
-         />
-         {!token && 
-         <Route 
-         path="/signup"
-         element={<Login tag="signup"/>}
-         />} */}
+      <Route 
+        path="/cart/"
+        element={<Cart />}
+     />
       <Route 
          path="*"
          element={<Navigate to={token ? '/' : '/not-found'}/>}
@@ -66,3 +61,14 @@ function App() {
 }
 
 export default App;
+
+
+ {/* <Route 
+         path="/signin"
+         element={<Login tag="signin" />}
+         />
+         {!token && 
+         <Route 
+         path="/signup"
+         element={<Login tag="signup"/>}
+         />} */}
