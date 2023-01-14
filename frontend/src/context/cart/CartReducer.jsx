@@ -3,6 +3,13 @@
 const CartReducer = (cartState, action) => {
     
     const {type, payload} = action
+
+    const getQty = (cart) => {
+        const qty = cart.reduce((acc , total) => {
+            return acc + Number(total.qty)
+          }, 0)
+          return qty
+    }
     
     switch(type){
         case 'ADD': 
@@ -25,10 +32,16 @@ const CartReducer = (cartState, action) => {
             }else{ 
               cartState.cart.push({...payload.item, qty: payload.qty}) 
             }
-               const qty = cartState.cart.reduce((acc , total) => {
-                return acc + Number(total.qty)
-              }, 0)
-              return {cart : cartState.cart, qty: qty  }
+              
+              return {cart : cartState.cart, qty: getQty(cartState.cart)  }
+        
+        case 'DELETE':
+
+              const res = cartState.cart.filter(e=>e._id!==payload)
+
+              return {
+                cart: res, qty: getQty(res)
+            }
 
         default: 
         return cartState

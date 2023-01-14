@@ -12,7 +12,11 @@ const CartProvider = ({children}) => {
     //     console.log(id)
     //     dispatch({type: 'ADD', payload: id})
     // }
-    const cartInfo = {cartState, dispatch}
+
+    const delFromCart = (id) => {
+        dispatch({type: 'DELETE', payload: id})
+    }
+    const cartInfo = {cartState, delFromCart, dispatch}
     return  <CartContext.Provider value={cartInfo}>
         {children}
     </CartContext.Provider>       
