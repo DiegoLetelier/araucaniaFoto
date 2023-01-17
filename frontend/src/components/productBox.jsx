@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import CartContext from '../context/cart/CartContext'
 
-// why item is recieving without curly parentesis=? no idea. 
 
  const ProductBox = ({item}) => {
   const {imgurl, name, brand, _id, qty} = item

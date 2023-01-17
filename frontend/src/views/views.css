@@ -50,6 +50,26 @@
 
 /* home */
 
+.homeBox {
+    flex: 1;
+    background-color: #91B7C7;
+   
+}
+
+.titleBox {
+    flex: 1;
+    flex-direction: row;
+    color: rgb(253, 253, 253);
+}
+
+.titleBox h1 {
+    text-align: center;
+}
+
+.titleBox p {
+    text-align: center;
+}
+
 .customVideo{
     overflow: hidden;
     padding-bottom: 55%;

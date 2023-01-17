@@ -1,3 +1,4 @@
+import './views.css'
 import {useEffect, useContext } from 'react'
 import UserContext from '../context/UserContext'
 
@@ -13,10 +14,12 @@ const Home = () => {
       }, [])
    
     return(
-       <div>
+      <div className='homeBox'>
+       <div className='titleBox'>
        <h1>Esta App es en homenaje a mi papá</h1>
        <p>Poco antes de cumplir 70 años, mi papá inició esta empresa. Pionero en usar energía solar en modelo off-grid para una empresa de turismo en la araucanía. </p>
        <h5>Aquí un video de él hablando sobre los paneles solares y cómo funcionan</h5>
+         </div>
        <div className="customVideo">
        <iframe
       width="853"
@@ -28,11 +31,7 @@ const Home = () => {
       title="Embedded youtube"
     />
      </div>
-       
-       
-       
-       
-       </div>
+     </div>
     )
    }
    
