@@ -10,6 +10,8 @@ import Store from '../src/views/store';
 import Blog from '../src/views/blog';
 import Profile from '../src/components/profile';
 import Cart from '../src/views/cart'
+import ProductOne from './components/productOne';
+
 
 
 
@@ -51,6 +53,10 @@ function App() {
         path="/cart/"
         element={<Cart />}
      />
+      <Route 
+        path="/producto/:id"
+        element={<ProductOne />}
+      />
       <Route 
          path="*"
          element={<Navigate to={token ? '/' : '/not-found'}/>}

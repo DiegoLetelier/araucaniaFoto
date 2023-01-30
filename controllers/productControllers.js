@@ -27,6 +27,16 @@ const createProduct = async (req, res) => {
     }
  }   
 
+ const getOneProduct = async (req, res) => {
+     try {
+        const {id} = req.params
+        const product = await Product.findById(id)
+        res.json({succes: true, product})
+    }catch (e) {
+        res.json({succes: false, message: e.message})
+    }
+
+}
 
 
 const getAllProducts = async (req, res) => {
@@ -54,7 +64,7 @@ const editProduct = async (req, res) => {
     }
 }
 
-module.exports = {createProduct, getAllProducts, getQtyProducts, editProduct}
+module.exports = {createProduct, getAllProducts, getQtyProducts, editProduct, getOneProduct}
 
 // eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNmFiMWI3MmNhYzM5YzkwYjFjZWZmOCIsImlhdCI6MTY2NzkzNjY5Nn0.w2QxxQMLk9no-Ll6VjMkbbd3Z6_0AF3aVnRU84ARTgM
 // eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNmFiMzg0ODNiNDg3NGFlZjBmZjhmYSIsImlhdCI6MTY2NzkzNzE1Nn0.cprxSFpywqTxbOldlpYQgH-cbtN5ZELhdFENhnM5kzg

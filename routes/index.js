@@ -4,7 +4,7 @@ const router = express.Router()
 
 const {createUser, getUser, deleteUser, editUser, login, validateToken } = require('../controllers/userControllers')
 
-const {createProduct,  getAllProducts, getQtyProducts, editProduct} = require('../controllers/productControllers')
+const {createProduct,  getAllProducts, getQtyProducts, editProduct, getOneProduct} = require('../controllers/productControllers')
 
 const {createJob, getQtyJobs} = require('../controllers/jobControllers')
 
@@ -18,12 +18,13 @@ router.route('/producto')
 .post(auth, createProduct)
 
 router.route('/producto/:id')
+.get(getOneProduct)
 .put(editProduct)
 
 router.route('/productos')
 .get(getAllProducts)
 
-router.route('/producto/:qty')
+router.route('/productos/:qty')
 .get(getQtyProducts)
 
 // Jobs

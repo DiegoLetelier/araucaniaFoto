@@ -1,3 +1,4 @@
+import './comp.css'
 import { useEffect } from "react";
 import { useContext } from "react";
 import UserContext from "../context/UserContext";
@@ -59,31 +60,37 @@ console.log(user)
   console.log(profile)
 
   return (
-    <Fragment>
-      <h1 className='userFormTitle mt-4 mb-4 text-white'>Información del usuario</h1>
-      <div className='userForm d-flex col-xl-12 col-lg-12 col-md-12 col-sm-12'>
+    <Fragment >
+      <div className='profileBox'>
+      <h1 className='profileTitle'>Información del usuario</h1>
+      <div className='profileForm'>
         <form>
-          <label htmlFor='name' className='text-dark'>Nombre:</label>
+          <div className='formInput'>  
+          <label htmlFor='name' className='formItem'>Nombre: </label>
           <input
-            className='form-label'
+            
             type='text'
             name='nombre'
             id='name'
             defaultValue={profile.nombre}
             onChange={(e) => handleInput(e)}
           />
-          <label htmlFor='lastname' className='text-dark'>Apellido:</label>
+          </div>
+          <div className='formInput'>
+          <label htmlFor='lastname'className='formItem'>Apellido:</label>
           <input
-            className='form-label'
+            
             type='text'
             name='apellido'
             placeholder='ingrese su apellido'
             defaultValue={profile.apellido}
             onChange={(e) => handleInput(e)}
           />
-          <label htmlFor='age' className='text-dark'>Edad:</label>
+           </div>
+           <div className='formInput'>
+          <label htmlFor='age' className='formItem'>Edad: &emsp; </label>
           <input
-            className='form-label'
+           
             type='number'
             name='edad'
             id='age'
@@ -91,9 +98,11 @@ console.log(user)
             defaultValue={profile.edad}
             onChange={(e) => handleInput(e)}
           />
-          <label htmlFor='email' className='text-dark'>Correo:</label>
+           </div>
+           <div className='formInput'>
+          <label htmlFor='email' className='formItem'>Correo: &ensp;</label>
           <input
-            className='form-label'
+            
             type='email'
             name='correo'
             id='email'
@@ -101,17 +110,22 @@ console.log(user)
             defaultValue={profile.correo}
             onChange={(e) => handleInput(e)}
           />
+           </div>
+                         
                           <button
-                              className='btn btn-dark'
                               onClick={(e) => {
                                   e.preventDefault()
                                   context.editUser(user)
-                              }
-                              }>
+                                  
+                              }}
+                              className='profileBtn'
+                              >
                               Editar mi información
                           </button>
+                          
                       </form>
                   </div>
+                </div>
               </Fragment>
   );
 };

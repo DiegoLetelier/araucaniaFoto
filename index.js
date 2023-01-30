@@ -4,7 +4,7 @@ require('dotenv').config()
 require('./config/database')
 const router = require('./routes/index')
 const app = express()
-
+const PORT = process.env.PORT || 4500;
 
 
 app.use(cors())
@@ -13,4 +13,4 @@ app.use('/api', router)
 
 
 
-app.listen(4000, () => console.log('Listening on port 4000'))
+app.listen(PORT, () => console.log(`Listening on port ${PORT}`))

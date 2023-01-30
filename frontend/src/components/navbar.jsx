@@ -199,6 +199,7 @@ const Navbar = () => {
               </Stack>
             ))}
           </Box>
+          <Stack className='cartMenuBar'>
           <Link to='/cart/'>
           <Box>
           
@@ -208,6 +209,7 @@ const Navbar = () => {
           </div>
           </Box>
           </Link>
+          </Stack>
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Perfil">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>

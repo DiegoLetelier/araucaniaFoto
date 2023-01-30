@@ -30,7 +30,7 @@ const Us = () => {
        console.log(jobs)
     
     return (
-        <div>
+        <div  className='usBox'>
             <h1>Nosotros</h1>
             <p>Iniciamos nuestro trabajo instalando paneles solares en nuestra propia casa. Y vimos cómo la comunidad alrededor nuestro se mostrpo interesada.
                 En nuestro equipo hay ingenieros eléctricos, industriales, técnicos y algunos otros que nos apoyan. Les dejamos algunos de nuestros proyectos. 

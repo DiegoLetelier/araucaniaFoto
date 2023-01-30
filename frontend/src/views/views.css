@@ -1,4 +1,46 @@
-/* us */
+/* This file has the css style for  1) cart, 2) us, 3) store, 4) home */
+
+/* 1 cart */
+
+.cartBox{
+  align-items: center;
+  text-align: center;
+  background-color: #b4babd;
+  margin-top: -50px;
+}
+
+.cartBoxh1 {
+    margin-top: 50px;
+    padding-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: aliceblue; 
+    text-shadow: 2px 2px 8px #090909;
+}
+
+.productsCartBox {
+    margin: 20px 2% 50px 2%;
+    background-color: rgb(112, 150, 109);
+    
+
+}
+
+.cartSpaces {
+    margin-bottom: 50px ;
+}
+
+/* 2 us */
+
+.usBox{
+    padding-top: 50px;
+    background-color: aliceblue;
+    text-align: center;
+
+}
+
+.usBox p {
+    padding: 15px 50px;
+}
 
 .jobsCont {
     text-align: center;
@@ -16,8 +58,20 @@
     }
 }
 
-/* store */
+/* 3 store */
 
+.storeBox {
+    background-color: #b4babd;
+
+}
+
+.storeBox h1{
+    text-align: center;
+    padding-top: 50px;
+    color: aliceblue; 
+    text-shadow: 2px 2px 8px #090909;
+    
+}
 
 .productCont{
     text-align: center;
@@ -48,34 +102,71 @@
 }
 
 
-/* home */
+/* 4  home */
+
+
+.forBox{
+
+   height: 250;
+   
+}
+
+/* 
+.bigHomeBox {
+    background-color: #738f9c;
+    margin: 5px;
+} */
 
 .homeBox {
     flex: 1;
-    background-color: #91B7C7;
+    background-color: #fefefe;
+    
+      }
+    
    
-}
+
 
 .titleBox {
     flex: 1;
     flex-direction: row;
     color: rgb(253, 253, 253);
+    border: 1px solid black;
+    padding: 10px;
+    box-sizing: border-box;
+        
+}
+
+.squareBox {
+    border: 2px solid black;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin: 20px 30px;
+    background-color: #738f9c;
+    
 }
 
 .titleBox h1 {
     text-align: center;
+   
 }
 
 .titleBox p {
     text-align: center;
 }
 
-.customVideo{
-    overflow: hidden;
-    padding-bottom: 55%;
-    position: relative;
-    height: 0;
+.titleBox h5 {
+    text-align: center;
+}
 
+
+.customVideo{
+    flex: 1;
+   overflow: hidden;
+   position: relative;
+   height: 0;
+   padding-bottom: 55%;
+    background-color: #738f9c;
+    
 }
 
 .customVideo iframe{

@@ -23,7 +23,7 @@ useEffect(()=> {
    
 
         try {
-            const res = await axios.get('http://localhost:4000/api/producto/12')
+            const res = await axios.get('http://localhost:4000/api/productos/12')
             const { succes, products } = res.data
       
             if (succes) {
@@ -38,7 +38,7 @@ useEffect(()=> {
  
  
     return (
-        <div>
+        <div className='storeBox'>
             <h1>Tienda</h1>
             <div className='productCont'>
             {products.map((e) => (<Product key={e._id} item={e}  />))}
