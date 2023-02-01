@@ -23,7 +23,7 @@ useEffect(()=> {
    
 
         try {
-            const res = await axios.get('http://localhost:4000/api/productos/12')
+            const res = await axios.get('https://araucaniafotovoltaicaapp.onrender.com/api/productos/12')
             const { succes, products } = res.data
       
             if (succes) {

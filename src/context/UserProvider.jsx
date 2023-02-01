@@ -88,7 +88,7 @@ const UserProvider = ({ children }) => {
       const validToken = async () => {
         const tokenn = localStorage.getItem("token");
         if (tokenn) {
-          const res = await axios.get("http://localhost:4000/api/usuariotoken", {
+          const res = await axios.get("https://araucaniafotovoltaicaapp.onrender.com/api/usuariotoken", {
             headers: {
               Authorization: 'Bearer ' + tokenn,
             },
