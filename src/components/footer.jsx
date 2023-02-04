@@ -23,13 +23,13 @@ export default function Footer() {
                 </Link>
               </Box>
               <Box>
-                <Link href="/us/" color="inherit">
+                <Link href="/us" color="inherit">
                 <img src='https://araucaniafotovoltaica.com/wp-content/uploads/2019/05/Ampolleta-sola.png' width={40} alt='ampolleta' />
                   Nosotros
                 </Link>
               </Box>
               <Box>
-                <Link href="/store/" color="inherit">
+                <Link href="/store" color="inherit">
                 <img src='https://araucaniafotovoltaica.com/wp-content/uploads/2019/05/Ampolleta-sola.png' width={40} alt='ampolleta' />
                   Tienda
                 </Link>
