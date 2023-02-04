@@ -12,7 +12,7 @@ const UserProvider = ({ children }) => {
 
   const signUp = async (user) => {
     try {
-      const res = await axios.post("http://localhost:4000/api/usuario", user);
+      const res = await axios.post("https://araucaniafotovoltaicaapp.onrender.com/api/usuario", user);
       if (res.data.succes) {
         console.log(res.data.token);
         // const tokenDecoded  = res.data.token
@@ -29,7 +29,7 @@ const UserProvider = ({ children }) => {
   const signIn = async (user) => {
     try {
       const res = await axios.post(
-        "http://localhost:4000/api/usuariologin",
+        "https://araucaniafotovoltaicaapp.onrender.com/api/usuariologin",
         user
       );
       if (res.data.succes) {
@@ -48,7 +48,7 @@ const UserProvider = ({ children }) => {
   const showUser = async (id) => {
     try {
       const res = await axios.get(
-        `http://localhost:4000/api/usuario/display/${id}`
+        `https://araucaniafotovoltaicaapp.onrender.com/api/usuario/display/${id}`
       );
 
       if (res.data.succes) {
@@ -70,7 +70,7 @@ const UserProvider = ({ children }) => {
     const id = user._id;
     try {
       const res = await axios.put(
-        `http://localhost:4000/api/usuario/${id}`,
+        `https://araucaniafotovoltaicaapp.onrender.com/api/usuario/${id}`,
         user
       );
       if (res.data.succes) {
