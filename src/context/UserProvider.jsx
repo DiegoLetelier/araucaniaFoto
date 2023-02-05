@@ -11,8 +11,9 @@ const UserProvider = ({ children }) => {
   });
 
   const signUp = async (user) => {
+
     try {
-      const res = await axios.post("https://araucaniafotovoltaicaapp.onrender.com/api/usuario", user);
+      const res = await axios.post('https://araucaniafotovoltaicaapp.onrender.com/api/usuario', user);
       if (res.data.succes) {
         console.log(res.data.token);
         // const tokenDecoded  = res.data.token
@@ -29,7 +30,7 @@ const UserProvider = ({ children }) => {
   const signIn = async (user) => {
     try {
       const res = await axios.post(
-        "https://araucaniafotovoltaicaapp.onrender.com/api/usuariologin",
+        'https://araucaniafotovoltaicaapp.onrender.com/api/usuariologin',
         user
       );
       if (res.data.succes) {
@@ -47,6 +48,7 @@ const UserProvider = ({ children }) => {
 
   const showUser = async (id) => {
     try {
+
       const res = await axios.get(
         `https://araucaniafotovoltaicaapp.onrender.com/api/usuario/display/${id}`
       );
@@ -88,7 +90,7 @@ const UserProvider = ({ children }) => {
       const validToken = async () => {
         const tokenn = localStorage.getItem("token");
         if (tokenn) {
-          const res = await axios.get("https://araucaniafotovoltaicaapp.onrender.com/api/usuariotoken", {
+          const res = await axios.get('https://araucaniafotovoltaicaapp.onrender.com/api/usuariotoken', {
             headers: {
               Authorization: 'Bearer ' + tokenn,
             },

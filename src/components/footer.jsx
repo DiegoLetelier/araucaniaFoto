@@ -17,19 +17,19 @@ export default function Footer() {
             <Grid item xs={12} sm={6}>
               <Box borderBottom={1}>Araucanía Fotovoltaica</Box>
               <Box>
-                <Link href="/" color="inherit">
+                <Link href='/' color="inherit">
                 <img src='https://araucaniafotovoltaica.com/wp-content/uploads/2019/05/Ampolleta-sola.png' width={40} alt='ampolleta' />
                  Inicio
                 </Link>
               </Box>
               <Box>
-                <Link href="/us" color="inherit">
+                <Link href='/us' color="inherit">
                 <img src='https://araucaniafotovoltaica.com/wp-content/uploads/2019/05/Ampolleta-sola.png' width={40} alt='ampolleta' />
                   Nosotros
                 </Link>
               </Box>
               <Box>
-                <Link href="/store" color="inherit">
+                <Link href='/store' color="inherit">
                 <img src='https://araucaniafotovoltaica.com/wp-content/uploads/2019/05/Ampolleta-sola.png' width={40} alt='ampolleta' />
                   Tienda
                 </Link>
