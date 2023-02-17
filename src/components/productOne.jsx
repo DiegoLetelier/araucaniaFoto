@@ -33,10 +33,10 @@ const ProductOne = () => {
     <div className='productBigBox'>
 
     <img src={imgurl} />
-    <p>{name}</p>
-    <p>{brand}</p>
-    <p>{model}</p>
-    <p>{price}</p>
+    <h3> Producto: &emsp; {name}</h3>
+    <p>Marca: &nbsp; {brand}</p>
+    <p>Características: &nbsp; {model}</p>
+    <p>Precio: &nbsp; {price}</p>
     </div>
 
   )

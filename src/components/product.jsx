@@ -19,7 +19,7 @@ const Product = ({item}) => {
 
     return (
        <div>
-        <Link to={`/producto/${_id}`}>
+        <Link to={`/producto/${_id}`} style={{textDecoration: 'none', textDecorationLine: 'none'}}>
         <div className="productCard">
         
         <img src={imgurl} width="350px" alt="" />

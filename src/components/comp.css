@@ -1,17 +1,33 @@
 /* product One */
 
 .productBigBox {
-    flex: 0.8;
-    align-items: center;
 
+    
+    background-color: #738f9c;
+    display: inline-block;
+    align-items: center;
+    align-content: center;
+    margin-top: 75px;
+    margin-left: 50px;
+    box-shadow: 5px 5px 5px #434747;
+    border-style: solid;
+    border-radius: 5px, black;
+    
+   
 }
 
-productBigBox img {
+.productBigBox img {
     width: 350px;
 
 }
 
+.productBigBox h3 {
+  text-align: center;
+}
 
+.productBigBox p{
+    text-align: center;
+}
 /* jobs */
 
 
@@ -26,6 +42,7 @@ productBigBox img {
 
 /* product */
 .productCard{
+    text-decoration: none;
     background-color: #90b64d6c;
     display: inline-block;
     box-shadow: 10px 10px 5px #434747;
